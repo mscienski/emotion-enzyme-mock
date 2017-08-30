@@ -1,0 +1,24 @@
+{
+  "name": "emotion-enzyme-mock",
+  "version": "0.0.1",
+  "description": "Mock utility to allow enzyme tests for components using emotion for CSS to execute successfully when running in Karma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mscienski/emotion-enzyme-mock.git"
+  },
+  "keywords": [
+    "emotion",
+    "enzyme",
+    "karma"
+  ],
+  "author": "Michal Scienski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mscienski/emotion-enzyme-mock/issues"
+  },
+  "homepage": "https://github.com/mscienski/emotion-enzyme-mock#readme"
+}
