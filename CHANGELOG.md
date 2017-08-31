@@ -1,3 +1,9 @@
+#### 1.0.8 (2017-08-31)
+
+##### Bug Fixes
+
+* **README:** fix typos in README ([ad9e5830](https://github.com/mscienski/emotion-enzyme-mock/commit/ad9e583054ce0b6048a4c1eecaea39afa788d5fd))
+
 #### 1.0.6 (2017-08-31)
 
 #### 1.0.6 (2017-08-31)
