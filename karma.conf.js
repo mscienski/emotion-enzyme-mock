@@ -28,15 +28,13 @@ const karmaConfig = {
     ],
     preprocessors: {
         'tests.webpack.js': [
-            'webpack',
-            'sourcemap'
+            'webpack'
         ]
     },
     reporters: ['dots', 'coverage-istanbul'],
     plugins: [
         require('karma-webpack'),
         require('karma-mocha'),
-        require('karma-sourcemap-loader'),
         require('karma-chrome-launcher'),
         require('karma-coverage-istanbul-reporter')
     ],

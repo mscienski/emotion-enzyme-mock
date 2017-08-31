@@ -3,18 +3,16 @@ const fs = require('fs');
 const path = require('path');
 
 const config = {
-    devtool: 'inline-source-map',
     target: 'web',
     module: {
         noParse: [
-            /node_modules\/sinon\//,
             /node_modules\/emotion\//,
             /node_modules\/react-emotion\//
         ],
         rules: [{
             test: /\.js$/,
             include: [
-                path.resolve(__dirname, 'src'),
+                path.resolve(__dirname, 'lib'),
                 path.resolve(__dirname, 'example')
             ],
             enforce: 'pre',
@@ -52,13 +50,12 @@ const config = {
     },
     resolve: {
         modules: [
-            'src',
+            'lib',
             'example',
             'node_modules'
         ],
         extensions: ['.js'],
         alias: {
-            'sinon': 'sinon/pkg/sinon',
             'emotion': path.resolve(__dirname, 'lib/index'),
             'react-emotion': path.resolve(__dirname, 'lib/index')
         }
