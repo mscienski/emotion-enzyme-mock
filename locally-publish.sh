@@ -9,4 +9,4 @@ if [ "$?" -ne "0" ]
 then
   exit $?
 fi
-npm publish --access=restricted
+npm publish
