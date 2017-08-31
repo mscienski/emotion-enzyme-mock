@@ -4,10 +4,7 @@
       "targets": {
         "node": "current"
       },
-      "modules": "umd"
+      "modules": false
     }]
-  ],
-  "plugins": [
-    "transform-runtime"
   ]
 }

@@ -9,12 +9,12 @@ const catchLogger = require('../helpers/catch-logger');
 function main() {
     return new Promise((resolve) => {
         console.log('');
-        console.log(chalk.blue('Running production build'));
+        console.log(chalk.blue('Running umd build'));
 
         console.log(chalk.yellow('Cleaning dist'));
         rimraf('dist', () => resolve());
     }).then(() => {
-        const buildCmd = './node_modules/.bin/babel src --out-dir dist --colors';
+        const buildCmd = './node_modules/.bin/webpack --config webpack.config.js';
         console.log(chalk.yellow(buildCmd));
 
         return exec(buildCmd, {
@@ -27,7 +27,7 @@ function main() {
         console.log(result.stdout);
         console.log('');
         console.log(chalk.green('Done'));
-    }).catch(catchLogger('Build failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
+    }).catch(catchLogger('UMD Build failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
 }
 
 // Run script if running in CLI

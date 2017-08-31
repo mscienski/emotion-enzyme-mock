@@ -7,12 +7,12 @@ const rimraf = require('rimraf');
 function main() {
     return new Promise((resolve) => {
         console.log('');
-        console.log(chalk.blue('Running production build'));
+        console.log(chalk.blue('Running umd build'));
 
         console.log(chalk.yellow('Cleaning dist'));
         rimraf('dist', () => resolve());
     }).then(() => {
-        const buildCmd = './node_modules/.bin/webpack --config webpack.config.prod.js --watch';
+        const buildCmd = './node_modules/.bin/webpack --config webpack.config.js --watch';
         console.log(chalk.yellow(buildCmd));
 
         execSync(buildCmd, {
