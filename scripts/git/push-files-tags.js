@@ -5,7 +5,6 @@ const exec = require('child-process-promise').exec;
 const catchLogger = require('../helpers/catch-logger');
 const FAILURE_STRATEGIES = require('../helpers/constants').FAILURE_STRATEGIES;
 const getVersionType = require('../helpers/get-version-type');
-const slackReportFailure = require('../slack/report-failure');
 const _get = require('lodash/get');
 
 function main() {
@@ -27,12 +26,7 @@ function main() {
         console.log(_get(result, 'stdout'));
         console.log('');
         console.log(chalk.green('Done'));
-    }).catch(() => {
-        if (isVersioning) {
-            slackReportFailure(getVersionType());
-        }
-        catchLogger('Git push files and tags failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL);
-    });
+    }).catch(catchLogger('Git push files and tags failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
 }
 
 // Run script if running in CLI
