@@ -1,3 +1,9 @@
+#### 1.0.1 (2017-08-31)
+
+##### Bug Fixes
+
+* **scripts:** fix a script ([39686bae](https://github.com/mscienski/emotion-enzyme-mock/commit/39686baeebeeded57ca7887317069406613eec89))
+
 ## 1.0.0 (2017-08-31)
 
 ##### Chores
