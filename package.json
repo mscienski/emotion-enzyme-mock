@@ -2,10 +2,6 @@
   "name": "emotion-enzyme-mock",
   "version": "0.0.1",
   "description": "Mock utility to allow enzyme tests for components using emotion for CSS to execute successfully when running in Karma",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mscienski/emotion-enzyme-mock.git"
@@ -20,5 +16,92 @@
   "bugs": {
     "url": "https://github.com/mscienski/emotion-enzyme-mock/issues"
   },
-  "homepage": "https://github.com/mscienski/emotion-enzyme-mock#readme"
+  "homepage": "https://github.com/mscienski/emotion-enzyme-mock#readme",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "*"
+  },
+  "dependencies": {
+    "html-tag-names": "^1.1.2",
+    "node-cache": "^4.1.1",
+    "svg-tag-names": "^1.1.1",
+    "tiny-uuid4": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.1",
+    "chai-enzyme": "^0.8.0",
+    "chai-string": "^1.4.0",
+    "chalk": "^2.1.0",
+    "child-process-promise": "^2.2.1",
+    "emotion": "^7.2.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "generate-changelog": "^1.3.0",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-mocha": "^1.3.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "lodash": "^4.17.4",
+    "mocha": "^3.3.0",
+    "nsp": "^2.7.0",
+    "pre-push": "^0.1.1",
+    "prepend-file": "^1.3.1",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.1",
+    "scripty": "^1.7.1",
+    "webpack": "^3.5.5",
+    "yargs": "^8.0.1"
+  },
+  "scripts": {
+    "build": "scripty",
+    "build:watch": "scripty",
+    "git:add-working-files": "scripty",
+    "git:push-files-tags": "scripty",
+    "lint": "scripty",
+    "prepublishOnly": "npm run build",
+    "prepush": "scripty",
+    "preversion": "scripty",
+    "version": "npm run git:add-working-files",
+    "postversion": "npm run git:push-files-tags",
+    "security": "scripty",
+    "test": "npm run test:dev",
+    "test:dev": "scripty",
+    "test:watch": "scripty"
+  },
+  "scripty": {
+    "silent": true
+  },
+  "engines": {
+    "node": ">= 6.10"
+  },
+  "pre-push": [
+    "prepush"
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "arrow-body-style": 0, // don't require braces in arrow function bodies
+    "comma-dangle": ["error", "never"], // comma dangling is gross
+    "import/extensions": 0, // webpack handles this
+    "import/no-extraneous-dependencies": 0, // errors on webpack resolve aliases for project files
+    "import/no-unresolved": 0, // this rule doesn't play nice with webpack
+    "import/prefer-default-export": 0, // only named exports are fine
+    "indent": [2, 4, { "SwitchCase": 1 }], // 4-space indent, warn, allow indents in switch
+    "jsx-a11y/no-noninteractive-element-interactions": 0, // someday
+    "jsx-a11y/no-static-element-interactions": 0, // someday
+    "max-len": 0, // sometimes long lines are okay
+    "newline-per-chained-call": 0, // no newline before then necessarily
+    "no-case-declarations": 0, // it's okay to declare variables in case statements (const)
+    "no-console": 0, // keep console logs
+    "no-debugger": 0, // keep debugger statements
+    "no-param-reassign": 0, // it's a good practice to not reassign params, but this leads to non-performant code (spreading objects in a loop) to try to satisfy it
+    "no-prototype-builtins": 0, // {}.hasOwnProperty.call() is ugly
+    "no-underscore-dangle": 0, // for "private" methods
+    "no-unused-expressions": 0, // for chai expect assertions that are not function calls (.to.be.true)
+    "react/forbid-prop-types": 0, // Array and object are okay propTypes for now
+    "react/jsx-filename-extension": 0, // Allow jsx files to have js extensions
+    "react/jsx-indent": [2, 4], // indent jsx components by 4 spaces
+    "react/jsx-indent-props": [2, 4], // indent props inside components by 4 spaces
+    "react/prefer-stateless-function": 0 // We use lifecycle methods for animation
+  },
+  "plugins": [
+    "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  },
+  "globals": {
+    "sinon": true,
+    "__DEVELOPMENT__": true,
+    "__INTEGRATION__": true
+  }
+}
