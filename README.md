@@ -64,7 +64,7 @@ import Component, { Title } from './Component';
 
 ...
 
-const wrapper = moount(<Component />);
+const wrapper = shallow(<Component />);
 expect(wrapper)
     .to.have.exactly(1).descendants(Title);
 ```
@@ -76,7 +76,7 @@ import Component, { Title } from './Component';
 
 ...
 
-const wrapper = moount(<Component />);
+const wrapper = render(<Component />);
 expect(wrapper)
     .to.have.exactly(1).descendants(Title().props.className);
 ```
