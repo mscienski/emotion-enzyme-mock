@@ -20,7 +20,9 @@
   "main": "dist/index.js",
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "README.md",
+    "CHANGELOD.md"
   ],
   "dependencies": {
     "html-tag-names": "^1.1.2",
