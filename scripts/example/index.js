@@ -7,7 +7,7 @@ const catchLogger = require('../helpers/catch-logger');
 
 function main() {
     console.log('');
-    console.log(chalk.blue('Running unit tests'));
+    console.log(chalk.blue('Running example tests'));
 
     const karmaCmd = './node_modules/.bin/karma start --colors';
     console.log(chalk.yellow(karmaCmd));
@@ -22,7 +22,7 @@ function main() {
         console.log(result.stdout);
         console.log('');
         console.log(chalk.green('Done'));
-    }).catch(catchLogger('Tests failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
+    }).catch(catchLogger('Example tests failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
 }
 
 // Run script if running in CLI

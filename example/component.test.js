@@ -5,7 +5,7 @@ import Component, {
     container,
     Title
 } from './component';
-import { getStyle } from '../src';
+import { getStyle } from '../lib';
 
 describe('Component', () => {
     it('has a container and a Title', () => {

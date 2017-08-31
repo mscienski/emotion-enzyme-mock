@@ -25,13 +25,11 @@ const config = {
 						["env", {
 							"targets": {
 								"node": "current"
-							}
+                            },
+                            "modules": false
 						}],
 						"react"
-					],
-                    "plugins": [
-                        "transform-runtime"
-                    ]
+					]
                 }
             }, {
                 loader: 'eslint-loader',
@@ -61,8 +59,8 @@ const config = {
         extensions: ['.js'],
         alias: {
             'sinon': 'sinon/pkg/sinon',
-            'emotion': path.resolve(__dirname, 'src/index'),
-            'react-emotion': path.resolve(__dirname, 'src/index')
+            'emotion': path.resolve(__dirname, 'lib/index'),
+            'react-emotion': path.resolve(__dirname, 'lib/index')
         }
     },
     externals: {

@@ -5,7 +5,7 @@ const childProcess = require('child_process');
 
 function main() {
     console.log('');
-    console.log(chalk.blue('Running unit tests'));
+    console.log(chalk.blue('Running example tests'));
 
     const karmaCmd = './node_modules/.bin/karma start --watch --colors';
     console.log(chalk.yellow(karmaCmd));
