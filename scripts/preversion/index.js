@@ -4,7 +4,8 @@ const chalk = require('chalk');
 const gitVerifyRemote = require('../git/verify-remote');
 const gitCheckClean = require('../git/check-clean');
 const lint = require('../lint');
-const test = require('../test/dev');
+const test = require('../test');
+const example = require('../example');
 const build = require('../build');
 const generateChangelog = require('../changelog');
 const security = require('../security');
@@ -28,6 +29,7 @@ function main() {
     .then(security)
     .then(lint)
     .then(test)
+    .then(example)
     .then(build)
     .then(() => generateChangelog(versionType))
     .then(() => {

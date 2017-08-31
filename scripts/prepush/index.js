@@ -2,7 +2,8 @@
 
 const chalk = require('chalk');
 const lint = require('../lint');
-const test = require('../test/dev');
+const test = require('../test');
+const example = require('../example');
 const build = require('../build');
 const FAILURE_STRATEGIES = require('../helpers/constants').FAILURE_STRATEGIES;
 const catchLogger = require('../helpers/catch-logger');
@@ -21,6 +22,7 @@ function main() {
 
     return lint()
     .then(test)
+    .then(example)
     .then(build)
     .catch(catchLogger('Pre-push checks failed!', !module.parent ? FAILURE_STRATEGIES.BAIL : FAILURE_STRATEGIES.FAIL));
 }
