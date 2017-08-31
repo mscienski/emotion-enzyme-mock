@@ -1,8 +1,8 @@
-import React from 'react';
-import htmlTagNames from 'html-tag-names';
-import svgTagNames from 'svg-tag-names';
-import NodeCache from 'node-cache';
-import uuid from 'tiny-uuid4';
+const React = require('React');
+const htmlTagNames = require('html-tag-names');
+const svgTagNames = require('svg-tag-names');
+const NodeCache = require('node-cache');
+const uuid = require('tiny-uuid4');
 
 const cache = new NodeCache();
 
@@ -55,8 +55,28 @@ function getStyle(item) {
     return getStyleByClassname(item.props.className);
 }
 
-export {
+function flush() {}
+function fontFace() {}
+function hydrate() {}
+function idFor() {}
+function injectGlobal() {}
+function isLikeRule() {}
+function keyFrames() {}
+function objStyle() {}
+function sheet() {}
+
+module.exports = {
     css,
-    getStyle
+    flush,
+    fontFace,
+    getStyle,
+    hydrate,
+    idFor,
+    injectGlobal,
+    isLikeRule,
+    keyFrames,
+    objStyle,
+    sheet
 };
-export default styled;
+Object.keys(styled).forEach((key) => { module.exports[key] = styled[key]; });
+module.exports.default = styled;

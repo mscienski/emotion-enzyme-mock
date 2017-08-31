@@ -26,7 +26,7 @@ describe('Component', () => {
             .to.have.exactly(1).descendants(Title);
 
         expect(getStyle(container))
-             .to.equalIgnoreSpaces(expectedContainer);
+             .to.containIgnoreSpaces(expectedContainer);
         expect(getStyle(Title()))
              .to.equalIgnoreSpaces(expectedTitle);
     });

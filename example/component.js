@@ -9,7 +9,12 @@ const threeFourthsWidth = '75vw';
 const normalFontNumber = 4;
 const normalFontUnit = 'em';
 
+const anyDiv = css`
+    display: block;
+`;
+
 const container = css`
+    composes: ${anyDiv};
     background-color: ${whiteIsh};
     margin: 0 auto;
     max-width: ${threeFourthsWidth};
