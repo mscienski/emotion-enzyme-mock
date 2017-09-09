@@ -1,3 +1,9 @@
+#### 1.1.1 (2017-09-09)
+
+##### Bug Fixes
+
+* **classNames:** extend classNames rather than replacing ([e6a50605](https://github.com/mscienski/emotion-enzyme-mock/commit/e6a50605e7a6c659c54387629d7cfd45787afa9c))
+
 ### 1.1.0 (2017-09-09)
 
 ##### New Features

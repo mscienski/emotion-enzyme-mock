@@ -1,6 +1,6 @@
 {
   "name": "emotion-enzyme-mock",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mock utility to allow enzyme tests for components using emotion for CSS to execute successfully when running in Karma",
   "repository": {
     "type": "git",
