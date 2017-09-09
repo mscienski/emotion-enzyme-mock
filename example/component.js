@@ -39,9 +39,9 @@ const Title = styled.div`
 
 const Component = () => (
     <div className={container}>
-        <Title />
-        <StyledP />
-        <StyledFooter />
+        <Title className="title" />
+        <StyledP className="styled-p" />
+        <StyledFooter className="styled-footer" />
     </div>
 );
 

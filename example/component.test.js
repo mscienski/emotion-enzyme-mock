@@ -40,8 +40,11 @@ describe('Test suite', () => {
             expect(wrapper)
                 .to.have.exactly(1).descendants(`.${container}`)
                 .to.have.exactly(1).descendants(StyledFooter)
+                .to.have.exactly(1).descendants('.styled-footer')
                 .to.have.exactly(1).descendants(StyledP)
-                .to.have.exactly(1).descendants(Title);
+                .to.have.exactly(1).descendants('.styled-p')
+                .to.have.exactly(1).descendants(Title)
+                .to.have.exactly(1).descendants('.title');
 
             expect(getStyle(container))
                 .to.containIgnoreSpaces(expectedContainer);
@@ -61,8 +64,11 @@ describe('Test suite', () => {
             expect(wrapper)
                 .to.have.exactly(1).descendants(`.${container}`)
                 .to.have.exactly(1).descendants(StyledFooter)
+                .to.have.exactly(1).descendants('.styled-footer')
                 .to.have.exactly(1).descendants(StyledP)
-                .to.have.exactly(1).descendants(Title);
+                .to.have.exactly(1).descendants('.styled-p')
+                .to.have.exactly(1).descendants(Title)
+                .to.have.exactly(1).descendants('.title');
 
             expect(getStyle(container))
                 .to.containIgnoreSpaces(expectedContainer);
@@ -82,8 +88,11 @@ describe('Test suite', () => {
             expect(wrapper)
                 .to.have.exactly(1).descendants(`.${container}`)
                 .to.have.exactly(1).descendants(`.${StyledFooter().props.className}`)
+                .to.have.exactly(1).descendants('.styled-footer')
                 .to.have.exactly(1).descendants(`.${StyledP().props.className}`)
-                .to.have.exactly(1).descendants(`.${Title().props.className}`);
+                .to.have.exactly(1).descendants('.styled-p')
+                .to.have.exactly(1).descendants(`.${Title().props.className}`)
+                .to.have.exactly(1).descendants('.title');
 
             expect(getStyle(container))
                 .to.containIgnoreSpaces(expectedContainer);
