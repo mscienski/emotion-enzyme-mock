@@ -20,6 +20,19 @@ const container = css`
     max-width: ${threeFourthsWidth};
 `;
 
+const P = () => (
+    <p>Component To Be Styled</p>
+);
+
+const StyledP = styled(P)`
+    font-size: 16px;
+`;
+
+const StyledFooter = styled('footer')`
+    color: ${whiteIsh};
+    margin-top: 10px;
+`;
+
 const Title = styled.div`
     font: normal ${normalFontNumber}${normalFontUnit} 'sans-serif';
 `;
@@ -27,11 +40,15 @@ const Title = styled.div`
 const Component = () => (
     <div className={container}>
         <Title />
+        <StyledP />
+        <StyledFooter />
     </div>
 );
 
 export default Component;
 export {
     container,
+    StyledFooter,
+    StyledP,
     Title
 };
