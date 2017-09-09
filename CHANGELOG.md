@@ -1,3 +1,9 @@
+### 1.2.0 (2017-09-09)
+
+##### New Features
+
+* **children:** add support for rendering children ([b6531f16](https://github.com/mscienski/emotion-enzyme-mock/commit/b6531f16ef77e4239fcb159e20d2b71c5742c25e))
+
 #### 1.1.1 (2017-09-09)
 
 ##### Bug Fixes
