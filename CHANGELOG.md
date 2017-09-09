@@ -1,3 +1,9 @@
+### 1.1.0 (2017-09-09)
+
+##### New Features
+
+* **styled:** add support for different method signatures for styled (styled('div') and styled(Component)) ([ec84b0b2](https://github.com/mscienski/emotion-enzyme-mock/commit/ec84b0b2e526c866ecae007f2a5f9429b31ba209))
+
 #### 1.0.8 (2017-08-31)
 
 ##### Bug Fixes
