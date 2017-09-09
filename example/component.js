@@ -20,11 +20,11 @@ const container = css`
     max-width: ${threeFourthsWidth};
 `;
 
-const P = () => (
-    <p>Component To Be Styled</p>
+const Span = () => (
+    <span>Component To Be Styled</span>
 );
 
-const StyledP = styled(P)`
+const StyledP = styled(Span)`
     font-size: 16px;
 `;
 
@@ -40,7 +40,9 @@ const Title = styled.div`
 const Component = () => (
     <div className={container}>
         <Title className="title" />
-        <StyledP className="styled-p" />
+        <StyledP className="styled-span">
+            <div className="sub-span" style={{ color: 'blue' }} />
+        </StyledP>
         <StyledFooter className="styled-footer" />
     </div>
 );
