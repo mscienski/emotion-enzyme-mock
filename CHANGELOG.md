@@ -1,3 +1,9 @@
+#### 1.2.1 (2017-09-11)
+
+##### New Features
+
+* **hoc:** implement a fix for higher order components rendering ([ce558298](https://github.com/mscienski/emotion-enzyme-mock/commit/ce5582986ba9bb90f54494f2c853a6db126fa3a5))
+
 ### 1.2.0 (2017-09-09)
 
 ##### New Features
