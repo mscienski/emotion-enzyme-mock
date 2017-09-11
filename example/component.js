@@ -37,12 +37,29 @@ const Title = styled.div`
     font: normal ${normalFontNumber}${normalFontUnit} 'sans-serif';
 `;
 
+const Low = styled.div`
+    color: blue;
+`;
+const Middle = () => <Low />;
+const High = () => <Middle />;
+
+const WithChildren = ({ children }) => {
+    if (typeof children === 'function') {
+        return children();
+    }
+
+    return children;
+};
+
 const Component = () => (
     <div className={container}>
         <Title className="title" />
         <StyledP className="styled-span">
             <div className="sub-span" style={{ color: 'blue' }} />
         </StyledP>
+        <High />
+        <WithChildren>{() => <High />}</WithChildren>
+        <WithChildren><High /></WithChildren>
         <StyledFooter className="styled-footer" />
     </div>
 );
